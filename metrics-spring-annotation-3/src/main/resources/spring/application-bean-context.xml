@@ -1,0 +1,10 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mainController" class="com.madhouse.metrics.controller.MainController">
+        <property name="metricsFactory" ref="metricsFactory"/>
+    </bean>
+    <bean id="metricsFactory" class="com.madhouse.metrics.util.MetricsFactory" scope="singleton"/>
+    </beans>
